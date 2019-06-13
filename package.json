@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "redefine",
+  "description": "redefine kenya pwa",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Teddy Otieno <asolatotieno@gmail.com>",
   "dependencies": {
     "gatsby": "^2.9.1",
     "gatsby-image": "^2.1.3",
@@ -35,9 +34,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/teddyotieno/redefine-gatsby.git"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/teddyotieno/redefine-gatsby/issues"
   }
 }
