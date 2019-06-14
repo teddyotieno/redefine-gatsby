@@ -1,44 +1,40 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-
+import { Global, css } from "@emotion/core"
 import Header from "./header"
-import "./layout.css"
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+export default ({ children }) => (
+  <>
+    <Global
+      styles={css`
+        *,
+        :after,
+        :before {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-size: inherit;
+        }
+        :root {
+          font-size: 62.5%;
+          body {
+            font-family: sans-serif;
+            font-size: 1.6rem;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
           }
         }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer></footer>
-        </div>
-      </>
-    )}
-  />
+        nav ul,
+        nav ol {
+          list-style: none;
+        }
+        button {
+          outline: none;
+          border: none;
+        }
+      `}
+    ></Global>
+    <Header />
+    <main>{children}</main>
+    <footer></footer>
+  </>
 )
-
-export default Layout

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 import React from "react"
-import { Link } from "gatsby"
+import theme from "./theme"
 
 const HeaderWrapper = styled.div`
   position: fixed;
@@ -12,7 +12,7 @@ const HeaderWrapper = styled.div`
 `
 
 const Header = styled.header`
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   height: inherit;
   display: flex;
@@ -20,8 +20,21 @@ const Header = styled.header`
   align-items: center;
 `
 
+const Button = styled.button`
+  border-radius: 100px;
+  font-size: 1.3rem;
+  padding: 14px 30px;
+  text-align: center;
+  color: #fff;
+  background: ${props =>
+    props.primary ? theme.colors.purple : theme.colors.white};
+`
+
 const Nav = styled.nav`
   display: flex;
+  button {
+    margin-left: 15px;
+  }
 `
 
 export default () => (
@@ -29,8 +42,8 @@ export default () => (
     <Header>
       &nbsp;
       <Nav>
-        <Link to="/page-2">Log In</Link>
-        <Link to="/signup">Get Started</Link>
+        <Button primary>Log In</Button>
+        <Button primary>Get Started</Button>
       </Nav>
     </Header>
   </HeaderWrapper>
