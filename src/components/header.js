@@ -3,7 +3,7 @@ import React from "react"
 import theme from "./theme"
 
 const HeaderWrapper = styled.div`
-  position: fixed;
+  position: sticky;
   width: 100%;
   height: 72px;
   background: #fff;

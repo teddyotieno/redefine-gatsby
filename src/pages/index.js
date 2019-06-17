@@ -1,20 +1,27 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import styled from "@emotion/styled"
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import HeroImage from "../images/family_cooking.jpg"
+
+const HomepageHeroContainer = styled.div`
+  height: calc(100vh - 72px);
+  background: red;
+  background: url(${HeroImage});
+  background-size: cover;
+  background-repeat: no-repeat;
+`
+
+const HomepageHero = styled.div`
+  height: inherit;
+  background: red;
+  background: rgba(102, 66, 151, 0.6);
+`
 
 const IndexPage = () => (
   <Layout>
-    {/* <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> */}
+    <HomepageHeroContainer>
+      <HomepageHero />
+    </HomepageHeroContainer>
   </Layout>
 )
 
