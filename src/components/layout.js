@@ -35,7 +35,7 @@ export default ({ children }) => (
     ></Global>
     <Global
       styles={css`
-        @import url("https://fonts.googleapis.com/css?family=Lato|Rubik:500,700&display=swap");
+        @import url("https://fonts.googleapis.com/css?family=Lato:300,400|Rubik:500,700&display=swap");
         h1,
         h2,
         h3,
@@ -46,6 +46,9 @@ export default ({ children }) => (
         }
         h3 {
           font-size: 3.5rem;
+        }
+        h4 {
+          font-size: 2rem;
         }
         a,
         button,
